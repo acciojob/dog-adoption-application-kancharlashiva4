@@ -1,78 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pet Adoption Application</title>
+    <title>Dog Adoption Application</title>
     <style>
-        /* Add your CSS styles here to make the form visually appealing */
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
+        /* CSS styles for the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
         }
 
         label {
             display: block;
-            margin-bottom: 10px;
+            margin-top: 10px;
+            font-weight: bold;
         }
 
         input[type="text"],
-        select,
-        input[type="checkbox"] {
+        select {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
 
+        input[type="checkbox"] {
+            margin-top: 5px;
+        }
+
         select[multiple] {
-            height: auto;
+            height: 100px;
         }
 
         button[type="submit"] {
-            padding: 10px 20px;
             background-color: #007BFF;
             color: #fff;
             border: none;
             border-radius: 5px;
+            padding: 10px 20px;
             cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <form>
-        <!-- Name -->
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <div class="form-container">
+        <h2>Dog Adoption Application</h2>
+        <form action="#" method="post">
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-        <!-- Phone Number -->
-        <label for="phone">Phone Number</label>
-        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
 
-        <!-- Address -->
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
 
-        <!-- Have you ever lived with a Dog before? -->
-        <label>
+            <!-- Have you ever lived with a Dog before? -->
+            <label for="dogExperience">Have you ever lived with a Dog before?</label>
             <input type="checkbox" id="dogExperience" name="dogExperience" value="Have you ever lived with a Dog before?">
-            Have you ever lived with a Dog before?
-        </label>
 
-        <!-- Please select your preferred breeds (multi-select) -->
-        <label for="preferredBreeds">Please select your preferred breeds (select multiple)</label>
-        <select id="preferredBreeds" name="preferredBreeds[]" multiple required>
-            <option value="Labrador">Labrador</option>
-            <option value="Golden Retriever">Golden Retriever</option>
-            <option value="German Shepherd">German Shepherd</option>
-            <option value="Bulldog">Bulldog</option>
-            <option value="Poodle">Poodle</option>
-        </select>
+            <!-- Please select your preferred breeds (multi-select) -->
+            <label for="preferredBreeds">Please select your preferred breeds (select multiple)</label>
+            <select id="preferredBreeds" name="preferredBreeds[]" multiple required>
+                <option value="Labrador">Labrador</option>
+                <option value="Golden Retriever">Golden Retriever</option>
+                <option value="German Shepherd">German Shepherd</option>
+                <option value="Bulldog">Bulldog</option>
+                <option value="Poodle">Poodle</option>
+            </select>
 
-        <!-- Submit Button -->
-        <button type="submit" name="submit" value="Submit">Submit</button>
-    </form>
+            <!-- Submit Button -->
+            <button type="submit" name="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
